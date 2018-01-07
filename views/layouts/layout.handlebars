@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>LOGIN APP</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body style="padding: 30px">
+<ul style="display: inline">
+    {{#if user}}
+            <li><a href="/logout">logout</a></li></ul>
+    {{else}}
+        <li> <a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+    {{/if}}
+
+
+{{#if success_msg}}
+    <div class="alert alert-success">{{success_msg}}</div>
+{{/if}}
+{{#if error_msg}}
+    <div class="alert alert-danger">{{error_msg}}</div>
+{{/if}}
+{{#if error}}
+    <div class="alert alert-danger">{{error}}</div>
+{{/if}}
+{{{body}}}
+</body>
+</html>
